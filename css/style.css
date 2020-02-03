@@ -1,0 +1,145 @@
+/*============= RESETS =============*/
+/*-- iPhone X Remove Gutters --*/
+html {
+   padding: env(safe-area-inset);
+}
+/*-- Body Font --*/
+body {
+   font-family: 'Roboto', sans-serif;
+   color: #505962;
+}
+/*============= NAVIGATION =============*/
+.navbar-brand img {
+   height: 2rem;
+}
+
+.navbar {
+   padding: .6rem 1rem;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+   background-color: rgba(57, 63, 70, .9);
+}
+
+.navbar-nav li {
+   padding-right: .8rem;
+}
+
+.navbar-nav .nav-link{
+   padding-top: .8rem;
+   color: white;
+}
+
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link:hover {
+   color: #00b3ff;
+}
+
+.navbar-toggler {
+   color: white;
+   font-size: 1.7em;
+}
+
+/*-- Remove Button Outline --*/
+button:active, button:focus {
+   outline: 0;
+}
+/*============= LANDING PAGE =============*/
+
+/*-- Fixed Landing Page Section --*/
+.landing {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: table;
+   background: #0b1419;
+   z-index: -1;
+}
+.home-wrap {
+   clip: rect(0, auto, auto, 0);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.home-inner {
+   background-image: url('../img/landing4.jpg');
+   position: fixed;
+   display: table;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+   transform:translateZ(0); /*3d*/
+   -webkit-transform: translateZ(0);
+   will-change: transform; /*fized position, browser doesn't impose*/
+}
+/*-- Landing Page Content --*/
+.caption {
+   z-index: 1;/*ONTOP OF IMAGE*/
+   top: 40%;
+   color: #ffffff;
+   font-weight: bolder;
+}
+
+.btn {
+   border-width: thick;
+   border-color: #ffffff;
+   padding: .5rem 1.2rem;
+   color: #ffffff;
+   font-weight: bolder;
+}
+
+/*============= ABOUT SECTION =============*/
+
+/*-- Scrollspy Offset --*/
+
+/*============= PORTFOLIO SECTION =============*/
+#portfolio {
+   height: 100px;
+}
+
+
+/*============= TESTIMONIALS SECTION =============*/
+
+
+
+/*============= CONTACT SECTION =============*/
+
+
+/*-- Contact Form --*/
+
+
+/*============= MEDIA QUERIES =============*/
+
+/* Medium (md) devices (tablets, 768px and under) */
+@media (max-width: 767px) {
+   .caption {
+      top: 35%;
+   }
+   .caption h1 {
+      font-size: 1.8rem;
+   }
+}
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
