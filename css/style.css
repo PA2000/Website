@@ -97,24 +97,56 @@ button:active, button:focus {
 /*-- Scrollspy Offset --*/
 
 /*============= PORTFOLIO SECTION =============*/
-#portfolio {
-   height: 100px;
+.portfolio-item img:hover {
+   cursor: zoom-in;
+   transform: scale(1, 1);
+}
+
+.portfolio-item img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 500px;
+   width: 300px;
+}
+/*============= Projects SECTION =============*/
+#projects>.jumbotron {
+   background-color: #A9A9A9;
+}
+
+#card-one {
+   background-color: #000000;
+   color: #ffffff;
+}
+
+#card-three {
+   background-color: #000000;
+   color: #ffffff;
+}
+
+.card>img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 300px;
+   width: 300px;
 }
 
 
-/*============= TESTIMONIALS SECTION =============*/
-
-
-
 /*============= CONTACT SECTION =============*/
+.heading-underline {
+   margin-left: auto;
+   margin-right: auto;
+   width: 10rem;
+   height: .25rem;
+   background-color: #00b3ff;
+}
 
-
-/*-- Contact Form --*/
 
 
 /*============= MEDIA QUERIES =============*/
 
-/* Medium (md) devices (tablets, 768px and under) */
+/* Medium (md) devices (tablets, 768pxls and under) */
 @media (max-width: 767px) {
    .caption {
       top: 35%;
@@ -124,22 +156,3 @@ button:active, button:focus {
    }
 }
 
-
-/*============ BOOTSTRAP BREAK POINTS:
-
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-=============*/
