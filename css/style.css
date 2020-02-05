@@ -98,18 +98,14 @@ button:active, button:focus {
 /*-- Scrollspy Offset --*/
 
 /*============= PORTFOLIO SECTION =============*/
+.portfolio-item img {
+   transition: transform .4s ease;
+}
 .portfolio-item img:hover {
    cursor: zoom-in;
-   transform: scale(1, 1);
+   transform: scale(1.1);
 }
 
-.portfolio-item img {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   height: 500px;
-   width: 300px;
-}
 /*============= Projects SECTION =============*/
 #projects>.jumbotron {
    background-color: #A9A9A9;
