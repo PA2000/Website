@@ -111,28 +111,26 @@ button:active, button:focus {
    background-color: #A9A9A9;
 }
 
+.card h5 {
+   color: #00b3ff;
+}
+.card p {
+   font-size: 1.1rem;
+}
+
+
 #card-one {
+   line-height: 1.5;
    background-color: #000000;
    color: #ffffff;
 }
 
-.card-body {
-   height: 200px;
-}
 
 #card-three {
+   line-height: 1.5;
    background-color: #000000;
    color: #ffffff;
 }
-
-.card>img {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   height: 300px;
-   width: 300px;
-}
-
 
 /*============= CONTACT SECTION =============*/
 .heading-underline {
