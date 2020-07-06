@@ -1,2 +1,2 @@
 # Website
-My personal website created for the All Star Code technical interview
+My personal website created from scratch.
