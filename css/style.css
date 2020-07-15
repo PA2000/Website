@@ -107,8 +107,14 @@ button:active, button:focus {
 }
 
 /*============= Game SECTION =============*/
-#game>.jumbotron {
+#game-exp {
    background-color: #A9A9A9;
+}
+
+#jumbo-canvas {
+   background-color: #A9A9A9;
+   margin: 0;
+   padding: 0;
 }
 
 /*============= Projects SECTION =============*/

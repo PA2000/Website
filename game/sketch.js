@@ -16,6 +16,7 @@ let highScore = 0
 let populationSize = 200
 let gen = 1
 let highGen = 1
+let smallScreenSize = false
 
 let dinos = []
 let savedDinos = []
@@ -49,10 +50,13 @@ function preload() {
 
 function setup() {
   var canvasDiv = document.getElementById('jumbo-canvas');
-  var width = canvasDiv.offsetWidth;
-  var sketchCanvas = createCanvas(width - 200, 350);
+  var width = canvasDiv.clientWidth;
+  var sketchCanvas = createCanvas(width, 350);
   sketchCanvas.parent("jumbo-canvas");
   sketchCanvas.mouseClicked(begin)
+  if (width < 768) {
+    smallScreenSize = true
+  }
 
   tf.setBackend('cpu')
 
@@ -201,17 +205,32 @@ function showObstacles() {
 }
 
 function writeToScreen() {
-  textSize(25);
-  let twidth = textWidth('Score: ' + score)
-  text('Score: ' + score, width / 2 - twidth / 2, 30);
-  fill(0, 102, 153);
-  let twidth2 = textWidth("High Score: " + highScore + " (" + "Gen: " + highGen + ")")
-  text("High Score: " + highScore + " (" + "Gen: " +  highGen + ")", width - twidth2, 30)
-  fill(0, 102, 153);
-  text('Gen: ' + gen, 0, 30);
-  fill(0, 102, 153);
-  text('Num Alive: ' + dinos.length, 0, 60);
-  fill(0, 102, 153);
+  if (smallScreenSize == false) {
+    textSize(25);
+    let twidth = textWidth('Score: ' + score)
+    text('Score: ' + score, width / 2 - twidth / 2, 30);
+    fill(0, 102, 153);
+    let twidth2 = textWidth("High Score: " + highScore + " (" + "Gen: " + highGen + ")")
+    text("High Score: " + highScore + " (" + "Gen: " +  highGen + ")", width - twidth2, 30)
+    fill(0, 102, 153);
+    text('Gen: ' + gen, 0, 30);
+    fill(0, 102, 153);
+    text('Num Alive: ' + dinos.length, 0, 60);
+    fill(0, 102, 153);
+  } else {
+    textSize(15);
+    let twidth = textWidth('Score: ' + score)
+    text('Score: ' + score, width - twidth, 30);
+    fill(0, 102, 153);
+    let twidth2 = textWidth("High Score: " + highScore + " (" + "Gen: " + highGen + ")")
+    text("High Score: " + highScore + " (" + "Gen: " +  highGen + ")", width - twidth2, 60)
+    fill(0, 102, 153);
+    text('Gen: ' + gen, 0, 30);
+    fill(0, 102, 153);
+    text('Num Alive: ' + dinos.length, 0, 60);
+    fill(0, 102, 153);
+  }
+  
 }
 
 function setUpNextGen() {
@@ -225,6 +244,11 @@ function setUpNextGen() {
 
 function windowResized() {
   var canvasDiv = document.getElementById('jumbo-canvas');
-  var width = canvasDiv.offsetWidth;
-  resizeCanvas(width - 200, 350);
+  var width = canvasDiv.clientWidth;
+  if (width < 768) {
+    smallScreenSize = true
+  } else {
+    smallScreenSize = false
+  }
+  resizeCanvas(width, 350);
  }
