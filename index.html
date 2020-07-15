@@ -8,6 +8,12 @@
 	<link rel="shortcut icon" href="img/plasma.png">
 	<!-- Bootstrap CSS https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- P5.JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+	<script src="https://unpkg.com/p5.collide2d"></script> 
+	<!--TENSORFLOW.JS-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 	<!-- Style.css -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Lightbox Image Gallery https://cdnjs.com/libraries/lightbox2 -->
@@ -31,6 +37,9 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a href="#home" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#game" class="nav-link">AI</a>
 					</li>
 					<li class="nav-item">
 						<a href="#about" class="nav-link">About</a>
@@ -64,6 +73,19 @@
 	</div>
 	<!-- End Home Section -->
 
+	<!-- Start Game Section -->
+	<div id="game" class="offset">
+
+		<!--START JUMBOTRON-->
+		<div id = "jumbo-canvas" class="jumbotron text-center pb-5 mb-0">
+			<h2 class="text-uppercase font-weight-bold">My AI Project</h2>
+			<div class="heading-underline mx=auto my-4"></div>
+			<p class=" my-4 font-weight-bold" >Here is a view of an exciting machine learning project I created. The program I created learns to suceed at Google Chrome's hidden dinosaur runner game that appears when there is no internet. The AI undergoes a process called neuroevolution in order to progressively improve at the game</p>
+			<p class=" my-4 font-weight-bold" >To begin playing, click or tap on the white screen belo</p>
+		</div>
+		<!--END JUMBOTRON-->
+	</div>
+	<!-- End Game Section -->
 
 	<!-- Start About Section -->
 	<div id="about">
@@ -126,7 +148,6 @@
 
 	</div>
 	<!-- End About Section -->
-
 
 	<!-- Start Projects Section -->
 	<div id="projects" class="offset">
@@ -223,6 +244,14 @@
 
 	<!-- Script Source Files -->
 
+	<!--Game Files-->
+	<script src = "game/ga.js"></script>
+	<script src = "game/nn.js"></script>
+	<script src = "game/dino.js"></script>
+	<script src = "game/obstacle.js"></script>
+	<script src = "game/bird.js"></script>
+	<script src = "game/ground.js"></script>
+	<script src = "game/sketch.js"></script>
 	<!-- jQuery https://code.jquery.com/ -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
