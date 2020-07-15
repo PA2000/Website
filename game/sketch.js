@@ -67,10 +67,10 @@ function setup() {
  }
  
 function begin() {
-  play = true
   if (play == true) {
     pause = !pause
   }
+  play = true
 }
 
 function keyPressed() {
