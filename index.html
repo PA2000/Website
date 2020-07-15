@@ -27,7 +27,7 @@
 	<div id="home">
 
 		<!-- Navigation -->
-		<nav class="navbar navbar-expand-md fixed-top text-uppercase font-weight-bold ">
+		<nav class="navbar navbar-expand-lg fixed-top text-uppercase font-weight-bold ">
 			<a href="#" class="navbar-brand"><img src="img/pad.png" alt=""></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -39,10 +39,10 @@
 						<a href="#home" class="nav-link">Home</a>
 					</li>
 					<li class="nav-item">
-						<a href="#game" class="nav-link">AI</a>
+						<a href="#about" class="nav-link">About</a>
 					</li>
 					<li class="nav-item">
-						<a href="#about" class="nav-link">About</a>
+						<a href="#game" class="nav-link">Machine Learning</a>
 					</li>
 					<li class="nav-item">
 						<a href="#projects" class="nav-link">Projects</a>
@@ -67,27 +67,13 @@
 		<div class="col-12 position-absolute text-center caption">
 			<h1 class="text-uppercase pb-3 pb-md-4">Welcome to my website</h1>
 			<a href="#about" class="btn btn-outline-light text-uppercase rounded-0">Get Started</a>
+			<h2 class="text-uppercase">Or</h2>
+			<a href="#game" class="btn btn-outline-light text-uppercase rounded-0">View a Code Demo</a>
 		</div>
 		<!--Start Landing Page Content-->
 
 	</div>
 	<!-- End Home Section -->
-
-	<!-- Start Game Section -->
-	<div id="game" >
-		<!--START JUMBOTRON-->
-		<div id = "game-exp" class="jumbotron text-center pb-5 mb-0">
-			<h2 class="text-uppercase font-weight-bold">My AI Project</h2>
-			<div class="heading-underline mx=auto my-4"></div>
-			<p class=" my-4 font-weight-bold" >Here is a view of an exciting machine learning project I created. The program I created learns to suceed at Google Chrome's hidden dinosaur runner game that appears when there is no internet. The AI undergoes a process called neuroevolution in order to progressively improve at the game</p>
-			<p class=" my-4 font-weight-bold" >To begin playing, click or tap on the white screen below</p>
-		</div>
-		<div id = "jumbo-canvas" class="jumbotron text-center pb-5 mb-0">
-			<!--ALL THE GAME STUFF HAPPENS HERE-->
-		</div>
-		<!--END JUMBOTRON-->
-	</div>
-	<!-- End Game Section -->
 
 	<!-- Start About Section -->
 	<div id="about">
@@ -97,7 +83,7 @@
 				<h2 class="text-uppercase font-weight-bold">About ME</h2>
 				<div class="heading-underline mx=auto my-4"></div>
 				<p class=" my-4 font-weight-bold" >Hello there! I'm Padmank and I love learning new things, meeting new people, and overcoming new challenges</p>
-				<p class="my-1" align="justify">Currently, I am a student at Rutgers University. At Rutgers, I study the ever evolving field of computer science. Prior to that, I was a part of the Math and Science Magnet Program at Morris Hills High School. It was in high school that I began my coding journey. I started experimenting with HTML and CSS and was eventually able to create simplistic webpages(unlike the one you are currently visiting). Eventually, after taking AP Computer Science, I began to learn more advanced object oriented languages, namely Java and Python. It was also around this time that I started developing rudementary android apps, some of which are shown in the "projects" section.</p>
+				<p class="my-1" align="justify">Currently, I am a student at Rutgers University. At Rutgers, I study the ever evolving field of computer science. Prior to that, I was a part of the Math and Science Magnet Program at Morris Hills High School. It was in high school that I began my coding journey. I started experimenting with HTML and CSS and was eventually able to create simplistic webpages (unlike the one you are currently visiting). Eventually, after taking AP Computer Science, I began to learn more advanced object oriented languages, namely Java and Python. It was also around this time that I started developing rudementary android applications. Thanks to several years of college and more experimentation on my own time, I currently possess much more experience and a myriad of other techinical abilities. I am presently iterested in machine learning and artificial intelligence and have built various applications that use these skills, some of which can be found in the <a href="#projects">projects</a> section.</p>
 				<p class="my-3" align="justify">Unlike the typical computer science major, I do have other interests, though they are quite nerdy. I am an ardent fan of Jeopordy and have watched the recent "Greatest of All Time" tournament religiously. In terms of activities, provided the weather is not unbearable, I enjoy embarking on long hikes accross local trails. On a similar note, I also delight in long drives accross open roads. </p>
 				<p class="my-3" align="justify">Throughout my life I have relished new challenges, whether they be physical of mental. My biggest, albeit my only, athletic accomplishment was earning my first degree black belt in taekwondo in November of 2016. Through an arduous 7 year journey and a grueling 3 day testing process, I emerged with a strong sense of self-confidence and a black belt in hand. In addition to that, I also take pride in the fact that I graduated Morris Hills High School with an AP Capstone Diploma earned through authoring a formal research paper. Though the process of conducting research was cumbersome, I ended up producing a product that I could be proud of. The final high point in my life occured during the summer of 2019, where I participated in a significant religious function. The function was my "Thread Ceremony" which officially initiated me into Brahminism. Below you will find a few pictures detailing my major accomplishments.</p>
 				<!-- Start Portfolio Section -->
@@ -151,6 +137,23 @@
 	</div>
 	<!-- End About Section -->
 
+	<!-- Start Game Section -->
+	<div id="game" >
+		<!--START JUMBOTRON-->
+		<div id = "game-exp" class="jumbotron text-center pb-5 mb-0">
+			<h2 class="text-uppercase font-weight-bold">My ML Project</h2>
+			<div class="heading-underline mx=auto my-4"></div>
+			<p class=" my-4 font-weight-bold" >Here is a view of an exciting machine learning project I created. The program learns to succeed at Google Chrome's hidden dinosaur runner game which appears when there is no internet. Using TensorFlow.js, an AI is built and trained through a process called neuroevolution in order to progressively improve at the game. The program beings by generating 200 dinosaurs which move about randomly. The players who get the furthest are chosen to pass their genetic material, or in other words, the weights of their nueral network, onto the next generation of dinosaurs. This process is continued until a player has evolved enough to never die.</p>
+			<p class=" my-4 font-weight-bold"> The code for this project can be found <a href="https://github.com/PA2000/Website/tree/master/game"target="_blank">by clicking here</a>.</p>
+			<p class=" my-4 font-weight-bold" >To begin the process, click or tap on the white screen below. To pause/resume the game, tap on the screen once more.</p>
+		</div>
+		<div id = "jumbo-canvas" class="jumbotron text-center pb-5 mb-0">
+			<!--ALL THE GAME STUFF HAPPENS HERE-->
+		</div>
+		<!--END JUMBOTRON-->
+	</div>
+	<!-- End Game Section -->
+
 	<!-- Start Projects Section -->
 	<div id="projects" class="offset">
 
@@ -158,7 +161,7 @@
 		<!-- Start Jumbotron-->
 		<div class="jumbotron text-center pb-5 mb-0">
 
-			<h2 class="text-uppercase font-weight-bold">Personal Projects</h2>
+			<h2 class="text-uppercase font-weight-bold">Programming Projects</h2>
 			<div class="heading-underline mx-auto my-4"></div>
 
 			<div class="row justify-content-center">
@@ -168,20 +171,20 @@
 
 						<div class="col-md-4 py-2">
 							<div id="card-one" class="card card-body h-100">
-								<img src="img/projects/pong.jpg" alt="" 
+								<img src="img/projects/flappybird.png" alt="" 
 								class="img-fluid card-img-top rounded-0">
-								<h4 class="mt-2 mb-3"><a href="https://github.com/PA2000/Pong" target="_blank">Pong</a></h4>
-								<p class="lead border-top pt-3">A recreation of the classic game pong developed by using java fx. It is complete with score keeping capabilities.</p>
+								<h4 class="mt-2 mb-3"><a href="https://github.com/PA2000/FlappyBirdAI" target="_blank">Flappy Bird AI</a></h4>
+								<p class="lead border-top pt-3">A machine learning project that uses genetic algorithms to train a bird to conquer the infamously difficult game of flappy bird</p>
 							</div>
 					  </div>
 
 					  <div class="col-md-4 py-2">
 							<div class="card card-body h-100">
-								<img src="img/projects/TicTacToe.png" alt="" 
+								<img src="img/projects/mysql.png" alt="" 
 								class="img-fluid card-img-top rounded-0">
 								 <div class="card-body">
-									<h4 class="mt-2 mb-3"><a href="https://github.com/PA2000/TicTacToe" target="_blank">Tic-Tac-Toe</a></h4>
-									<p class="lead border-top pt-3">A recreation of the classic game tic tac toe developed by using java fx</p>
+									<h4 class="mt-2 mb-3"><a href="https://github.com/PA2000/TicTacToe" target="_blank">MySQL Fullstack Web App</a></h4>
+									<p class="lead border-top pt-3">A web application that models an airline website, built using node.js, bootstrap, and a MySql Database</p>
 								 </div>
 							</div>
 					  </div>
@@ -219,7 +222,7 @@
 
 				<div class="col-md-6 col-lg-4 about pb-4 pb-lg-2">
 					<i class="fas fa-desktop fa-3x"></i>
-					<h4 class="text-uppercase pt-3 pb-2"><a href="www.linkedin.com/in/padmank-a-01a052139" target="_blank">LinkedIn</a></h4>
+					<h4 class="text-uppercase pt-3 pb-2"><a href="https://www.linkedin.com/in/padmank-a-01a052139" target="_blank">LinkedIn</a></h4>
 					<p class="lead">For a professional view of my skills and talents, feel free to head on over to my official linked in page</p>
 				</div>
 

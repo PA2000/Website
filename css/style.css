@@ -108,6 +108,7 @@ button:active, button:focus {
 
 /*============= Game SECTION =============*/
 #game-exp {
+   
    background-color: #A9A9A9;
 }
 
@@ -119,7 +120,8 @@ button:active, button:focus {
 
 /*============= Projects SECTION =============*/
 #projects>.jumbotron {
-   background-color: #A9A9A9;
+   background-color: #505050;
+   color: #000000
 }
 
 .card h5 {

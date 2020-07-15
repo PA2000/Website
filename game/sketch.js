@@ -10,6 +10,7 @@ let groundCounter = 0
 let groundHeight = 306
 
 let play = false
+let pause = false
 let speed = 10
 let score = 0
 let highScore = 0
@@ -67,6 +68,9 @@ function setup() {
  
 function begin() {
   play = true
+  if (play == true) {
+    pause = !pause
+  }
 }
 
 function keyPressed() {
@@ -76,13 +80,11 @@ function keyPressed() {
   }
 }
 
-
-
 function draw() {
   if (play == false) {
     background(255)
   }
-  if (play == true) {
+  if (play == true && pause == false) {
     background(bimage);
     writeToScreen()
     score++
