@@ -1,5 +1,4 @@
 function nextGeneration() {
-   console.log('next generation');
    calculateFitness();
    for (let i = 0; i < populationSize; i++) {
      dinos[i] = pickOne();
@@ -18,14 +17,6 @@ function pickOne() {
       index++
    }
    index--
-   /*let index = 0
-   let bestFitness = 0
-   for (i = 0; i < savedDinos.length; i++) {
-      if (savedDinos[i].fitness > bestFitness) {
-         bestFitness = savedDinos[i].fitness
-         index = i
-      }
-   }*/
    let dino = savedDinos[index]
    let child = new Dino(dino.brain)
    child.mutate()

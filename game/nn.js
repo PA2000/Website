@@ -14,47 +14,53 @@ class NeuralNetwork{
    }
 
    copy() {
-      const modelCopy = this.createModel()
-      const weights = this.model.getWeights()
-      const weightCopies = []
-      for (let i = 0; i < weights.length; i++){
-         weightCopies[i] = weights[i].clone() 
-      }
-      modelCopy.setWeights(weightCopies)
-      return new NeuralNetwork(modelCopy, this.inputNodes, this.hiddenNodes, this.outputNodes)
+      return tf.tidy(() => {
+         const modelCopy = this.createModel()
+         const weights = this.model.getWeights()
+         const weightCopies = []
+         for (let i = 0; i < weights.length; i++){
+            weightCopies[i] = weights[i].clone() 
+         }
+         modelCopy.setWeights(weightCopies)
+         return new NeuralNetwork(modelCopy, this.inputNodes, this.hiddenNodes, this.outputNodes)
+      })
    }
 
    mutate(rate) {
-      const weights = this.model.getWeights()
-      const mutatedWeights = []
-      for (i = 0; i < weights.length; i++){
-         let tensor = weights[i]
-         let shape = weights[i].shape
-         //TENSORS ARE IMMUTABLE, SO WE NEED TO CONVERT THE TENSOR INTO A REGULAR JAVASCRIPT OBJECT
-         let values = tensor.dataSync().slice()
-         for (let j = 0; j < values.length; j++){
-            if (random(1) <= rate) {
-               let w = values[j]
-               values[j] = w + randomGaussian()
+      tf.tidy(() => {
+         const weights = this.model.getWeights()
+         const mutatedWeights = []
+         for (i = 0; i < weights.length; i++){
+            let tensor = weights[i]
+            let shape = weights[i].shape
+            //TENSORS ARE IMMUTABLE, SO WE NEED TO CONVERT THE TENSOR INTO A REGULAR JAVASCRIPT OBJECT
+            let values = tensor.dataSync().slice()
+            for (let j = 0; j < values.length; j++){
+               if (random(1) <= rate) {
+                  let w = values[j]
+                  values[j] = w + randomGaussian()
+               }
             }
+            //NOW THAT WE HAVE MUTATED WEIGHTS, PUT THEM BACK INTO A TESNSOR, WITH THE ORIGINAL SHAPE
+            let newTensor = tf.tensor(values, shape)
+            mutatedWeights[i] = newTensor
          }
-         //NOW THAT WE HAVE MUTATED WEIGHTS, PUT THEM BACK INTO A TESNSOR, WITH THE ORIGINAL SHAPE
-         let newTensor = tf.tensor(values, shape)
-         mutatedWeights[i] = newTensor
-      }
-      this.model.setWeights(mutatedWeights)
+         this.model.setWeights(mutatedWeights)
+      })    
    }
 
    predict(inputs) {
-      const xs = tf.tensor2d([inputs])
-      const ys = this.model.predict(xs)
-      const outputs = ys.dataSync()
-      //console.log(outputs)
-      return outputs
+      return tf.tidy(() => {
+         const xs = tf.tensor2d([inputs])
+         const ys = this.model.predict(xs)
+         const outputs = ys.dataSync()
+         //console.log(outputs)
+         return outputs
+      })
    }
 
    dispose() {
-      //this.
+      this.model.dispose()
    }
 
    createModel() {

@@ -83,6 +83,10 @@ function keyPressed() {
 function draw() {
   if (play == false) {
     background(255)
+    smallScreenSize == true ? textSize(20) : textSize(50);
+    let twidth = textWidth('Click Here to Begin Running the AI')
+    text('Click Here to Begin Running the AI', width / 2 - twidth / 2, height/2);
+    fill(0, 102, 153);
   }
   if (play == true && pause == false) {
     background(bimage);
@@ -107,7 +111,7 @@ function draw() {
 
 function updateObstacles() {
   obstacleTimer++
-  //speed += 0.002
+  //speed += 0.001
   if (obstacleTimer > minObstacleTime + randomAddition) { //if the obstacle timer is high enough then add a new obstacle
     addObstacle();
   }
@@ -123,9 +127,8 @@ function updateObstacles() {
 
 //every so often add an obstacle 
 function addObstacle() {
-  //var lifespan = pop.populationLife;
   let tempInt
-  if (score > 500 && random(1) < 0.20) { // 15% of the time add a bird
+  if (score > 500 && random(1) < 0.25) { // 25% of the time add a bird
     tempInt = floor(random(3));
     let temp = new Bird(tempInt);
     birds.push(temp);
